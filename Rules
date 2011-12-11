@@ -1,0 +1,85 @@
+#!/usr/bin/env ruby
+
+# A few helpful tips about the Rules file:
+#
+# * The string given to #compile and #route are matching patterns for
+#   identifiers--not for paths. Therefore, you can’t match on extension.
+#
+# * The order of rules is important: for each item, only the first matching
+#   rule is applied.
+#
+# * Item identifiers start and end with a slash (e.g. “/about/” for the file
+#   “content/about.html”). To select all children, grandchildren, … of an
+#   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
+#   because “*” matches zero or more characters.
+
+compile %r{/_.+/$} do
+  # don't compile partials
+end
+
+compile '/css/*/' do
+  filter :sass, Compass.sass_engine_options
+end
+
+compile '/js/*/' do
+  # only minify if it's not already minified
+  unless MINIFIED_JS_RE.match(item[:extension])
+    filter :uglify_js
+  end
+end
+
+compile '/404/' do
+  # don't compile 404.html
+end
+
+compile '*' do
+  if item.binary?
+    # don’t filter binary items
+  else
+    case item[:extension]
+    when 'md'
+      filter :erb
+      filter :kramdown
+    when 'haml'
+      filter :haml
+    else
+      filter :erb
+    end
+    if HTML_EXTENSIONS.include?(item[:extension])
+      layout 'default'
+    end
+  end
+end
+
+route %r{/_.+/$} do
+  nil # don't route partials
+end
+
+route '/css/*/' do
+  item.identifier.chop + '.css'
+end
+
+route '/js/*/' do
+  # use .min.js extension for non-minified JS files
+  ext = item[:extension]
+  unless MINIFIED_JS_RE.match(ext)
+    ext = ext.sub(/js$/, 'min.js')
+  end
+  item.identifier.chop + '.' + ext
+end
+
+route '/404/' do
+  '/404.html'
+end
+
+route '*' do
+  if item.binary? || !HTML_EXTENSIONS.include?(item[:extension])
+    # Write item with identifier /foo/ to /foo.ext
+    item.identifier.chop + '.' + item[:extension]
+  else
+    # Write item with identifier /foo/ to /foo/index.html
+    item.identifier + 'index.html'
+  end
+end
+
+layout '*', :haml
