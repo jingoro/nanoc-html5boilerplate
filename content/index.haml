@@ -2,43 +2,54 @@
 title: Home
 ---
 
-%h1 A Brand New nanoc + HTML5 Boilerplate Site
+#content
+  %h1 A Brand New <code>nanoc + HTML5 Boilerplate</code> Site
 
-%p
-  You’ve just created a new nanoc site. The page you are looking at right
-  now is the home page for your site. To get started, consider replacing
-  this default homepage with your own customized homepage. Some pointers
-  on how to do so:
+  %p
+    You’ve just created a new <code>nanoc + HTML5 Boilerplate site</code>. The
+    page you are looking at right now is the home page for your site. To get
+    started, consider replacing this default homepage with your own customized
+    homepage. Some pointers on how to do so:
 
-%ul
-  %li
-    %p
-      <strong>Change this page’s content</strong> by editing the “index.haml”
-      file in the “content” directory. This is the actual page content, and
-      therefore doesn’t include the header, sidebar or style information
-      (those are part of the layout).
-  %li
-    %p
-      <strong>Change the layout</strong>, which is the “default.haml” file
-      in the “layouts” directory which uses HTML5 Boilerplate.
-  %li
-    %p
-      <strong>Change the style</strong>, which is the “style.scss” file in
-      the “content/css” directory which uses Compass and HTML5 Boilerplate.
+  %ul
+    %li
+      %p
+        <strong>Change this page’s content</strong> by editing the “index.haml”
+        file in the “content” directory which uses
+        #{link_to 'Haml', 'http://haml-lang.com/'}. This is the actual page
+        content, and therefore doesn’t include the header, sidebar or style
+        information (those are part of the layout).
+    %li
+      %p
+        <strong>Change the layout</strong>, which is the “default.haml” file in
+        the “layouts” directory which uses
+        #{link_to 'Haml', 'http://haml-lang.com/'} and is based on the
+        #{link_to 'HTML5 Boilerplate', 'http://html5boilerplate.com/'}
+        template.
+    %li
+      %p
+        <strong>Change the style</strong>, which is the “style.scss” file in
+        the “content/css” directory which uses
+        #{link_to 'Sass', 'http://sass-lang.com/'},
+        #{link_to 'Compass', 'http://compass-style.org/'} and
+        #{link_to 'HTML5 Boilerplate', 'http://html5boilerplate.com/'}.
  
-%p If you need any help with customizing your nanoc + HTML5 Boilerplate web site, be sure to check out the documentation (see below), and be sure to subscribe to the discussion group (also see sidebar). Enjoy!
+  %p
+    If you need any help with customizing your <code>nanoc + HTML5 Boilerplate
+    site</code> web site, be sure to check out the documentation (see sidebar),
+    and be sure to subscribe to the discussion group (also see sidebar). Enjoy!
 
-%h2 nanoc Documentation
-%ul
-  %li
-    %a{:href => 'http://nanoc.stoneship.org/docs/'} Documentation
-  %li
-    %a{:href => 'http://nanoc.stoneship.org/docs/3-getting-started/'} Getting Started
-%h2 nanoc Community
-%ul
-  %li
-    %a{:href => 'http://groups.google.com/group/nanoc/'} Discussion Group
-  %li
-    %a{:href => 'irc://chat.freenode.net/#nanoc'} IRC Channel
-  %li
-    %a{:href => 'http://projects.stoneship.org/trac/nanoc/'} Wiki
+#sidebar
+  %h2 Documentation
+  %ul
+    %li= link_to 'Nanoc Documentation', 'http://nanoc.stoneship.org/docs/'
+    %li= link_to 'Nanoc Getting Started', 'http://nanoc.stoneship.org/docs/3-getting-started/'
+    %li= link_to 'HTML5 Boilerplate', 'http://html5boilerplate.com/'
+    %li= link_to 'Haml Reference', 'http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html'
+    %li= link_to 'Sass Reference', 'http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html'
+    %li= link_to 'Compass Reference', 'http://compass-style.org/reference/compass/'
+  %h2 Community
+  %ul
+    %li= link_to 'Nanoc Discussion Group', 'http://groups.google.com/group/nanoc/'
+    %li= link_to 'Nanoc IRC Channel', 'irc://chat.freenode.net/#nanoc'
+    %li= link_to 'Nanoc Wiki', 'http://projects.stoneship.org/trac/nanoc/'
