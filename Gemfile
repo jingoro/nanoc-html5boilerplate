@@ -4,6 +4,7 @@ gem 'nanoc', '~> 3.2.4'
 gem 'haml', '~> 3.1.4'
 gem 'sass', '~> 3.1.12'
 gem 'compass', '~> 0.12.alpha.4'
+gem 'compass-h5bp', '~> 0.0.2'
 
 gem 'activesupport'
 gem 'kramdown'

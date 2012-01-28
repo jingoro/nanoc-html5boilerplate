@@ -1,13 +1,38 @@
-// HTML5 Boilerplate Normalize
-@import "partials/h5bp/normalize";
+//
+// compass-h5bp (HTML5 Boilerplate for Compass/SASS)
+// https://github.com/sporkd/compass-h5bp
+// http://html5boilerplate.com/
+//
+@import "h5bp";
 
+//
+// compass-h5bp normalize
+// https://github.com/sporkd/compass-h5bp/blob/master/stylesheets/h5bp/_normalize.scss
+//
+// Override compass-h5bp variables:
+// $line-height: 1.4;
+// $font-color: #222;
+// $link-color: #00e;
+// $link-hover-color: #06e;
+// $link-visited-color: #551a8b;
+// $selected-font-color: #fff;
+// $selected-background-color: #ff5e99;
+// $invalid-background-color: #f0dddd;
+//
+@include h5bp-normalize;
+
+//
+// compass-h5bp normalize helper mixins
+// https://github.com/sporkd/compass-h5bp/blob/master/stylesheets/h5bp/_helpers.scss
+//
+@include h5bp-helpers;
+
+//
 // Your styles here
+//
 
-
-
-// Please define your styles before this section
-
-// HTML5 Boilerplate Ending Styles
-@import "partials/h5bp/helpers";
-@import "partials/h5bp/media";
-@import "partials/h5bp/print";
+//
+// compass-h5bp media and print
+// https://github.com/sporkd/compass-h5bp/blob/master/stylesheets/h5bp/_media.scss
+//
+@include h5bp-media;

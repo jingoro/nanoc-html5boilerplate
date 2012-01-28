@@ -13,6 +13,9 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+HTML_EXTENSIONS = %w(html haml md) unless defined?(HTML_EXTENSIONS)
+MINIFIED_JS_RE = /min\.js$/ unless defined?(MINIFIED_JS_RE)
+
 compile %r{/_.+/$} do
   # don't compile partials
 end
