@@ -1,6 +1,8 @@
 nanoc + HTML5 Boilerplate Skeleton Project
 ==========================================
 
+See the [demo output here](http://jingoro.github.com/nanoc-html5boilerplate/).
+
 This is a nanoc skeleton project that incorporates the following to get you started right:
 
 - [nanoc v3.2.4](http://nanoc.stoneship.org/)
