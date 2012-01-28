@@ -1,10 +1,11 @@
 source :rubygems
 
-gem 'activesupport', '~> 3.1'
-gem 'nanoc', '~> 3.2.3'
+gem 'nanoc', '~> 3.2.4'
 gem 'haml', '~> 3.1.4'
-gem 'sass', '~> 3.1.11'
-gem 'compass', '~> 0.12.alpha.2'
+gem 'sass', '~> 3.1.12'
+gem 'compass', '~> 0.12.alpha.4'
+
+gem 'activesupport'
 gem 'kramdown'
 gem 'uglifier'
 
