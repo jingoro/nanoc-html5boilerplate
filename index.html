@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class='no-js' lang='en'>
   <!--<![endif]-->
@@ -11,79 +11,84 @@
     <title>Home</title>
     <meta content='' name='description' />
     <meta content='' name='author' />
-    <meta content='nanoc 3.2.3' name='generator' />
+    <meta content='nanoc v3.2.4' name='generator' />
     <meta content='width=device-width,initial-scale=1' name='viewport' />
     <link href='css/style.css' rel='stylesheet' />
-    <script src='js/libs/modernizr-2.0.6.min.js'></script>
+    <script src='js/libs/modernizr-2.5.2.min.js'></script>
   </head>
   <body>
-    <div id='container'>
-      <header></header>
-      <div id='main' role='main'>
-        <div id='content'>
-          <h1>A Brand New <code>nanoc + HTML5 Boilerplate</code> Site</h1>
-          <p>
-            You’ve just created a new <code>nanoc + HTML5 Boilerplate site</code>. The
-            page you are looking at right now is the home page for your site. To get
-            started, consider replacing this default homepage with your own customized
-            homepage. Some pointers on how to do so:
-          </p>
-          <ul>
-            <li>
-              <p>
-                <strong>Change this page’s content</strong> by editing the “index.haml”
-                file in the “content” directory which uses
-                <a href="http://haml-lang.com/">Haml</a>. This is the actual page
-                content, and therefore doesn’t include the header, sidebar or style
-                information (those are part of the layout).
-              </p>
-            </li>
-            <li>
-              <p>
-                <strong>Change the layout</strong>, which is the “default.haml” file in
-                the “layouts” directory which uses
-                <a href="http://haml-lang.com/">Haml</a> and is based on the
-                <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>
-                template.
-              </p>
-            </li>
-            <li>
-              <p>
-                <strong>Change the style</strong>, which is the “style.scss” file in
-                the “content/css” directory which uses
-                <a href="http://sass-lang.com/">Sass</a>,
-                <a href="http://compass-style.org/">Compass</a> and
-                <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.
-              </p>
-            </li>
-          </ul>
-          <p>
-            If you need any help with customizing your <code>nanoc + HTML5 Boilerplate
-            site</code> web site, be sure to check out the documentation (see sidebar),
-            and be sure to subscribe to the discussion group (also see sidebar). Enjoy!
-          </p>
-        </div>
-        <div id='sidebar'>
-          <h2>Documentation</h2>
-          <ul>
-            <li><a href="http://nanoc.stoneship.org/docs/">Nanoc Documentation</a></li>
-            <li><a href="http://nanoc.stoneship.org/docs/3-getting-started/">Nanoc Getting Started</a></li>
-            <li><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
-            <li><a href="http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html">Haml Reference</a></li>
-            <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">Sass Reference</a></li>
-            <li><a href="http://compass-style.org/reference/compass/">Compass Reference</a></li>
-          </ul>
-          <h2>Community</h2>
-          <ul>
-            <li><a href="http://groups.google.com/group/nanoc/">Nanoc Discussion Group</a></li>
-            <li><a href="irc://chat.freenode.net/#nanoc">Nanoc IRC Channel</a></li>
-            <li><a href="http://projects.stoneship.org/trac/nanoc/">Nanoc Wiki</a></li>
-          </ul>
-        </div>
+    <!--[if lt IE 7 ]>
+      <p class='chromeframe'>
+        Your browser is <em>ancient!</em>
+        <a href="http://browsehappy.com/">Upgrade to a different browser</a> or
+        <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a>
+        to experience this site.
+      </p>
+    <![endif]-->
+    <header></header>
+    <div id='main' role='main'>
+      <div id='content'>
+        <h1>A Brand New <code>nanoc + HTML5 Boilerplate</code> Site</h1>
+        <p>
+          You’ve just created a new <code>nanoc + HTML5 Boilerplate site</code>. The
+          page you are looking at right now is the home page for your site. To get
+          started, consider replacing this default homepage with your own customized
+          homepage. Some pointers on how to do so:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>Change this page’s content</strong> by editing the “index.haml”
+              file in the “content” directory which uses
+              <a href="http://haml-lang.com/">Haml</a>. This is the actual page
+              content, and therefore doesn’t include the header, sidebar or style
+              information (those are part of the layout).
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Change the layout</strong>, which is the “default.haml” file in
+              the “layouts” directory which uses
+              <a href="http://haml-lang.com/">Haml</a> and is based on the
+              <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>
+              template.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Change the style</strong>, which is the “style.scss” file in
+              the “content/css” directory which uses
+              <a href="http://sass-lang.com/">Sass</a>,
+              <a href="http://compass-style.org/">Compass</a> and
+              <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>.
+            </p>
+          </li>
+        </ul>
+        <p>
+          If you need any help with customizing your <code>nanoc + HTML5 Boilerplate
+          site</code> web site, be sure to check out the documentation (see sidebar),
+          and be sure to subscribe to the discussion group (also see sidebar). Enjoy!
+        </p>
       </div>
-      <footer></footer>
+      <div id='sidebar'>
+        <h2>Documentation</h2>
+        <ul>
+          <li><a href="http://nanoc.stoneship.org/docs/">Nanoc Documentation</a></li>
+          <li><a href="http://nanoc.stoneship.org/docs/3-getting-started/">Nanoc Getting Started</a></li>
+          <li><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
+          <li><a href="http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html">Haml Reference</a></li>
+          <li><a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">Sass Reference</a></li>
+          <li><a href="http://compass-style.org/reference/compass/">Compass Reference</a></li>
+        </ul>
+        <h2>Community</h2>
+        <ul>
+          <li><a href="http://groups.google.com/group/nanoc/">Nanoc Discussion Group</a></li>
+          <li><a href="irc://chat.freenode.net/#nanoc">Nanoc IRC Channel</a></li>
+          <li><a href="http://projects.stoneship.org/trac/nanoc/">Nanoc Wiki</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- / ! end of #container -->
+    <footer></footer>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
     <script type='text/javascript'>
       //<![CDATA[
@@ -94,19 +99,11 @@
     <script src='js/script.min.js'></script>
     <script type='text/javascript'>
       //<![CDATA[
-        window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-        Modernizr.load({
-          load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-        });
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
       //]]>
     </script>
-    <!--[if lt IE 7 ]>
-      <script src='//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js'></script>
-      <script type='text/javascript'>
-        //<![CDATA[
-          window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})
-        //]]>
-      </script>
-    <![endif]-->
   </body>
 </html>
