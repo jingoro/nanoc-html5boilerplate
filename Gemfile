@@ -2,9 +2,9 @@ source :rubygems
 
 gem 'nanoc', '~> 3.2.4'
 gem 'haml', '~> 3.1.4'
-gem 'sass', '~> 3.1.12'
-gem 'compass', '~> 0.12.alpha.4'
-gem 'compass-h5bp', '~> 0.0.2'
+gem 'sass', '~> 3.1.14'
+gem 'compass', '= 0.12.rc.1'
+gem 'compass-h5bp', :git => 'git://github.com/jingoro/compass-h5bp.git'
 
 gem 'activesupport'
 gem 'kramdown'

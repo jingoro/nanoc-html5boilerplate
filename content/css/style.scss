@@ -16,16 +16,22 @@
 // $link-hover-color: #06e;
 // $link-visited-color: #551a8b;
 // $selected-font-color: #fff;
-// $selected-background-color: #ff5e99;
+// $selected-background-color: #fe57a1;
 // $invalid-background-color: #f0dddd;
 //
 @include h5bp-normalize;
 
 //
-// compass-h5bp normalize helper mixins
+// compass-h5bp helper mixins
 // https://github.com/sporkd/compass-h5bp/blob/master/stylesheets/h5bp/_helpers.scss
 //
 @include h5bp-helpers;
+
+//
+// compass-h5bp chromeframe
+// https://github.com/sporkd/compass-h5bp/blob/master/stylesheets/h5bp/_chromeframe.scss
+//
+@include h5bp-chromeframe;
 
 //
 // Your styles here
