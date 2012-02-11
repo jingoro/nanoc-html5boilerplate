@@ -14,7 +14,6 @@
 #   because “*” matches zero or more characters.
 
 HTML_EXTENSIONS = %w(html haml md) unless defined?(HTML_EXTENSIONS)
-MINIFIED_JS_RE = /min\.js$/ unless defined?(MINIFIED_JS_RE)
 
 compile %r{/_.+/$} do
   # don't compile partials
@@ -25,10 +24,8 @@ compile '/css/*/' do
 end
 
 compile '/js/*/' do
-  # only minify if it's not already minified
-  unless MINIFIED_JS_RE.match(item[:extension])
-    filter :uglify_js
-  end
+  filter :js_concat
+  filter :uglify_js
 end
 
 compile '/404/' do
@@ -50,6 +47,7 @@ compile '*' do
     end
     if HTML_EXTENSIONS.include?(item[:extension])
       layout 'default'
+      filter :cache_buster
     end
   end
 end
@@ -59,16 +57,13 @@ route %r{/_.+/$} do
 end
 
 route '/css/*/' do
-  item.identifier.chop + '.css'
+  fp = fingerprint(item[:filename])
+  item.identifier.chop + fp + '.css'
 end
 
 route '/js/*/' do
-  # use .min.js extension for non-minified JS files
-  ext = item[:extension]
-  unless MINIFIED_JS_RE.match(ext)
-    ext = ext.sub(/js$/, 'min.js')
-  end
-  item.identifier.chop + '.' + ext
+  fp = fingerprint(item[:filename])
+  item.identifier.chop + fp + '.js'
 end
 
 route '/404/' do

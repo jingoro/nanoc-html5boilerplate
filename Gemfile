@@ -8,6 +8,7 @@ gem 'compass-h5bp', :git => 'git://github.com/jingoro/compass-h5bp.git'
 
 gem 'activesupport'
 gem 'kramdown'
+gem 'nanoc-cachebuster'
 gem 'uglifier'
 
 # needed to run nanoc autocompile

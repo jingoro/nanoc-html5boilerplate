@@ -24,5 +24,5 @@ Public domain
 
 # Todo
 
-- Cache-busting for css/js
+- Improve dependency tracking for cache busting
 - Option to turn on/off css/js minification
