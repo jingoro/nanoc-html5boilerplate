@@ -2,7 +2,7 @@ source :rubygems
 
 gem 'nanoc', '~> 3.2.4'
 gem 'haml', '~> 3.1.4'
-gem 'sass', '~> 3.1.14'
+gem 'sass', '~> 3.1.15'
 gem 'compass', '~> 0.12.rc.1'
 gem 'compass-h5bp', :git => 'git://github.com/jingoro/compass-h5bp.git'
 
