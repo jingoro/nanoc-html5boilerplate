@@ -55,7 +55,7 @@ compile '*' do
 end
 
 BYPASS_FILES.each do |file|
-  compile("/#{file.sub /\..+/, ''}/") do
+  route("/#{file.sub /\..+/, ''}/") do
     "/#{file}" # route bypass files as is
   end
 end
