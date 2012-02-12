@@ -13,10 +13,16 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-HTML_EXTENSIONS = %w(html haml md) unless defined?(HTML_EXTENSIONS)
+BYPASS_FILES = %w(404.html crossdomain.xml humans.txt robots.txt) unless defined?(BYPASS_FILES)
+
+BYPASS_FILES.each do |file|
+  compile("/#{file.sub /\..+/, ''}/") do
+    # don't filter bypass files
+  end
+end
 
 compile %r{/_.+/$} do
-  # don't compile partials
+  # don't filter partials
 end
 
 compile '/css/*/' do
@@ -26,10 +32,6 @@ end
 compile '/js/*/' do
   filter :js_concat
   filter :uglify_js
-end
-
-compile '/404/' do
-  # don't compile 404.html
 end
 
 compile '*' do
@@ -45,10 +47,16 @@ compile '*' do
     else
       filter :erb
     end
-    if HTML_EXTENSIONS.include?(item[:extension])
+    if %w(html haml md).include?(item[:extension])
       layout 'default'
       filter :cache_buster
     end
+  end
+end
+
+BYPASS_FILES.each do |file|
+  compile("/#{file.sub /\..+/, ''}/") do
+    "/#{file}" # route bypass files as is
   end
 end
 
@@ -66,12 +74,8 @@ route '/js/*/' do
   item.identifier.chop + fp + '.js'
 end
 
-route '/404/' do
-  '/404.html'
-end
-
 route '*' do
-  if item.binary? || !HTML_EXTENSIONS.include?(item[:extension])
+  if item.binary?
     # Write item with identifier /foo/ to /foo.ext
     item.identifier.chop + '.' + item[:extension]
   else

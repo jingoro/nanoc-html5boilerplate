@@ -1,7 +1,7 @@
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
 # will be considered as binary.
-text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml' ]
+text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml', 'coffee' ]
 
 # The path to the directory where all generated files will be written to. This
 # can be an absolute path starting with a slash, but it can also be path
@@ -10,7 +10,7 @@ output_dir: output
 
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
-# “index.hml”, but depending on the web server, this may be something else,
+# “index.html”, but depending on the web server, this may be something else,
 # such as “default.htm”. This list is used by nanoc to generate pretty URLs.
 index_filenames: [ 'index.html' ]
 
@@ -18,6 +18,16 @@ index_filenames: [ 'index.html' ]
 # site. The diff will contain the differences between the compiled content
 # before and after the last site compilation.
 enable_output_diff: false
+
+prune:
+  # Whether to automatically remove files not managed by nanoc from the output
+  # directory. For safety reasons, this is turned off by default.
+  auto_prune: false
+
+  # Which files and directories you want to exclude from pruning. If you version
+  # your output directory, you should probably exclude VCS directories such as
+  # .git, .svn etc.
+  exclude: [ '.git', '.hg', '.svn', 'CVS' ]
 
 # The data sources where nanoc loads its data from. This is an array of
 # hashes; each array element represents a single data source. By default,
@@ -39,6 +49,14 @@ data_sources:
     # The path where layouts should be mounted. The layouts root behaves the
     # same as the items root, but applies to layouts rather than items.
     layouts_root: /
+
+    # Whether to allow periods in identifiers. When turned off, everything
+    # past the first period is considered to be the extension, and when
+    # turned on, only the characters past the last period are considered to
+    # be the extension. For example,  a file named “content/about.html.erb”
+    # will have the identifier “/about/” when turned off, but when turned on
+    # it will become “/about.html/” instead.
+    allow_periods_in_identifiers: false
 
 # Configuration for the “watch” command, which watches a site for changes and
 # recompiles if necessary.

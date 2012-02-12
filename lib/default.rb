@@ -11,16 +11,16 @@ unless defined? LOADED_DEFAULT_CONFIG
   Compass.add_project_configuration File.expand_path('../../compass-config.rb', __FILE__)
 
   # include common helpers
-  include Nanoc3::Helpers::HTMLEscape
-  include Nanoc3::Helpers::LinkTo
-  include Nanoc3::Helpers::Rendering
+  include Nanoc::Helpers::HTMLEscape
+  include Nanoc::Helpers::LinkTo
+  include Nanoc::Helpers::Rendering
 
   # cache busting
-  require 'nanoc3/cachebuster'
-  include Nanoc3::Helpers::CacheBusting
+  require 'nanoc/cachebuster'
+  include Nanoc::Helpers::CacheBusting
   
   # poor man's JS concatenation
-  class JsConcatFilter < Nanoc3::Filter
+  class JsConcatFilter < Nanoc::Filter
     identifier :js_concat
     def run(content, args = {})
       current_dir_pathname = Pathname.new(@item[:content_filename]).dirname.realpath
@@ -45,6 +45,6 @@ unless defined? LOADED_DEFAULT_CONFIG
       content
     end
   end
-  Nanoc3::Filter.register '::JsConcatFilter', :js_concat
+  Nanoc::Filter.register '::JsConcatFilter', :js_concat
 
 end
