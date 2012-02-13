@@ -15,9 +15,10 @@ Additional added functionality includes:
 - [Sass](http://sass-lang.com/)
 - [Compass](http://compass-style.org/)
 - [Compass + HTML5 Boilerplate integration](https://github.com/jingoro/compass-h5bp)
-- [cache busting](https://github.com/avdgaag/nanoc-cachebuster)
-- [Markdown support](https://github.com/gettalong/kramdown)
+- [cache busting](https://github.com/jingoro/nanoc-cachebuster)
+- [Image compression](https://github.com/jingoro/nanoc-image-compressor)
 - [Javascript minification](https://github.com/lautis/uglifier)
+- [Markdown support](https://github.com/gettalong/kramdown)
 
 Enjoy!
 

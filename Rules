@@ -34,6 +34,10 @@ compile '/js/*/' do
   filter :uglify_js
 end
 
+compile '/img/*/' do
+  filter :image_compressor if item.binary?
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items

@@ -19,6 +19,9 @@ unless defined? LOADED_DEFAULT_CONFIG
   require 'nanoc/cachebuster'
   include Nanoc::Helpers::CacheBusting
   
+  # image compression
+  require 'nanoc/filters/image_compressor'
+  
   # poor man's JS concatenation
   class JsConcatFilter < Nanoc::Filter
     identifier :js_concat
