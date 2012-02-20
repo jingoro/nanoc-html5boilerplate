@@ -14,6 +14,7 @@
 #   because “*” matches zero or more characters.
 
 BYPASS_FILES = %w(404.html crossdomain.xml humans.txt robots.txt) unless defined?(BYPASS_FILES)
+IMAGE_COMPRESS_OPTIONS = { :pngout => false } unless defined?(IMAGE_COMPRESS_OPTIONS)
 
 BYPASS_FILES.each do |file|
   compile("/#{file.sub /\..+/, ''}/") do
@@ -35,7 +36,7 @@ compile '/js/*/' do
 end
 
 compile '/img/*/' do
-  filter :image_compressor if item.binary?
+  filter :image_compressor, IMAGE_COMPRESS_OPTIONS if item.binary?
 end
 
 compile '*' do

@@ -1,12 +1,12 @@
 source :rubygems
 
-gem 'nanoc', '~> 3.3.0'
+gem 'nanoc', '~> 3.3.1'
 gem 'haml', '~> 3.1.4'
 gem 'sass', '~> 3.1.15'
 gem 'compass', '~> 0.12.rc.1'
 gem 'compass-h5bp', :git => 'git://github.com/jingoro/compass-h5bp.git'
-gem 'nanoc-cachebuster', :git => 'git@github.com:jingoro/nanoc-cachebuster.git'
-gem 'nanoc-image-compressor'
+gem 'nanoc-cachebuster', :git => 'https://github.com/avdgaag/nanoc-cachebuster'
+gem 'nanoc-image-compressor', '~> 0.1.0'
 
 gem 'activesupport'
 gem 'kramdown'
