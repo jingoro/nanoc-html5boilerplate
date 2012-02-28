@@ -31,7 +31,7 @@ compile '/css/*/' do
 end
 
 compile '/js/*/' do
-  filter :js_concat
+  filter :concat_js
   filter :uglify_js
 end
 

@@ -28,15 +28,16 @@ You can view the skeleton site by browsing the generated `output/index.html` fil
 
 # Extra Functionality
 
+- [jQuery](http://jquery.com/)
 - [Haml](http://haml-lang.com/)
 - [Sass](http://sass-lang.com/)
 - [Compass](http://compass-style.org/)
+- [Markdown](https://github.com/gettalong/kramdown)
 - [Compass + HTML5 Boilerplate integration](https://github.com/sporkd/compass-h5bp)
 - [Cache busting](https://github.com/avdgaag/nanoc-cachebuster)
 - [Image compression](https://github.com/jingoro/nanoc-image-compressor)
+- [Javascript concatenation](https://github.com/jingoro/nanoc-javascript-concatenator)
 - [Javascript minification](https://github.com/lautis/uglifier)
-- [jQuery](http://jquery.com/)
-- [Markdown support](https://github.com/gettalong/kramdown)
 
 # License
 
