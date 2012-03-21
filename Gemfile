@@ -1,4 +1,3 @@
-#source :rubygems
 source 'https://rubygems.org'
 
 gem 'nanoc', '~> 3.3.2'
