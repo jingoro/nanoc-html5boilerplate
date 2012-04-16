@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'nanoc', '~> 3.3.2'
+gem 'nanoc', '~> 3.3.3'
 gem 'haml', '~> 3.1.4'
 gem 'sass', '~> 3.1.15'
 gem 'compass', '~> 0.12'
@@ -12,6 +12,7 @@ gem 'nanoc-javascript-concatenator'
 gem 'activesupport'
 gem 'kramdown'
 gem 'uglifier'
+gem 'multi_json', '~> 1.2.0' # needed for uglifier v1.2.4
 
 # needed for tasks
 gem 'rake'
