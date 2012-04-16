@@ -210,8 +210,7 @@ AddType text/x-vcard                        vcf
 # ----------------------------------------------------------------------
 
 # These are pretty far-future expires headers.
-# They assume you control versioning with cachebusting query params like
-#   <script src="application.js?20100608">
+# They assume you control versioning with filename-based cache busting
 # Additionally, consider that outdated proxies may miscache
 #   www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
 
@@ -320,10 +319,14 @@ FileETag None
 
 # Turning on the rewrite engine is necessary for the following rules and features.
 # FollowSymLinks must be enabled for this to work.
+#
+# Some cloud hosting services require RewriteBase to be set: goo.gl/HOcPN
+# If using the h5bp in a subdirectory, use `RewriteBase /foo` instead where 'foo' is your directory.
 
 <IfModule mod_rewrite.c>
   Options +FollowSymlinks
   RewriteEngine On
+# RewriteBase /
 </IfModule>
 
 

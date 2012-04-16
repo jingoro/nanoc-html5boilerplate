@@ -16,10 +16,10 @@ BASE_URL = 'https://raw.github.com/h5bp/html5-boilerplate/master'
   'favicon.ico' => 'content/favicon.ico',
   'humans.txt' => 'content/humans.txt',
   'robots.txt' => 'content/robots.txt',
-  'js/libs/jquery-1.7.1.js' => 'content/js/libs/jquery.js',
-  'js/libs/modernizr-2.5.3.min.js' => 'content/js/libs/modernizr.js',
+  'js/vendor/jquery-1.7.2.js' => 'content/js/vendor/jquery.js',
+  'js/vendor/modernizr-2.5.3.min.js' => 'content/js/vendor/modernizr.js',
+  'js/main.js' => 'content/js/_main.js',
   'js/plugins.js' => 'content/js/_plugins.js',
-  'js/script.js' => 'content/js/_script.js',
   '.htaccess' => 'h5bp.htaccess',
   '.gitignore' => 'h5bp.gitignore',
 }.each do |repo_file, local_file|
