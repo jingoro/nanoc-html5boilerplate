@@ -1,7 +1,7 @@
 nanoc + HTML5 Boilerplate Skeleton Project
 ==========================================
 
-A nanoc skeleton project that incorporates [nanoc v3.3.2](http://nanoc.stoneship.org/), [HTML5 Boilerplate v3.0](http://html5boilerplate.com/) and much more (see below) to get you started right.
+A nanoc skeleton project that incorporates [nanoc v3.3.3](http://nanoc.stoneship.org/), [HTML5 Boilerplate v3.0](http://html5boilerplate.com/) and much more (see below) to get you started right.
 
 See the [example skeleton site output here](http://jingoro.github.com/nanoc-html5boilerplate/).
 
@@ -45,5 +45,6 @@ Public domain
 
 # Todo
 
+- CSS fingerprinting doesn't seem to work...
 - Improve dependency tracking for cache busting
 - Option to turn on/off minification
