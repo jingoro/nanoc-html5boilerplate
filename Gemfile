@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'nanoc', '~> 3.3.6'
-gem 'haml', '~> 3.1.4'
-gem 'sass', '~> 3.1.16'
+gem 'haml', '~> 3.1.6'
+gem 'sass', '~> 3.1.19'
 gem 'compass', '~> 0.12.1'
 gem 'compass-h5bp', '>= 0.0.5'
-gem 'nanoc-cachebuster', '>= 0.3.0'
-gem 'nanoc-image-compressor', '>= 0.1.0'
+gem 'nanoc-cachebuster', '>= 0.3.1'
+gem 'nanoc-image-compressor', '>= 0.1.1'
 gem 'nanoc-javascript-concatenator'
 
 gem 'activesupport'
