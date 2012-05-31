@@ -20,7 +20,9 @@ See the [example skeleton site output here](http://jingoro.github.com/nanoc-html
     cd mysite
     bundle
 
-4\. Compile the site.
+4\. (Optional) [Install image compression binaries](https://github.com/toy/image_optim#binaries-installation) if your project will contain images.
+
+5\. Compile the site.
 
     nanoc compile
 
