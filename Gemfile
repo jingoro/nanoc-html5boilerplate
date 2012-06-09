@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'nanoc', '~> 3.3.7'
+gem 'nanoc', '~> 3.4.0'
 gem 'haml', '~> 3.1'
 gem 'sass', '~> 3.1'
 gem 'compass', '~> 0.12'
