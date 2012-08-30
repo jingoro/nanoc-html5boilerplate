@@ -1,5 +1,3 @@
-require 'compass-h5bp'
-
 project_path = File.dirname(File.dirname(__FILE__))
 http_path = '/'
 output_style = :compressed
