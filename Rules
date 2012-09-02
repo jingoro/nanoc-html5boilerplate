@@ -48,7 +48,7 @@ compile '*' do
       filter :erb
       filter :kramdown
     when 'haml'
-      filter :haml
+      filter :haml, :format => :html5
     else
       filter :erb
     end
@@ -89,4 +89,4 @@ route '*' do
   end
 end
 
-layout '*', :haml
+layout '*', :haml, :format => :html5
