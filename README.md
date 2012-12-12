@@ -1,6 +1,8 @@
 nanoc + HTML5 Boilerplate Skeleton Project
 ==========================================
 
+[![Dependency Status](https://gemnasium.com/jingoro/nanoc-html5boilerplate.png)](https://gemnasium.com/jingoro/nanoc-html5boilerplate)
+
 A nanoc skeleton project that incorporates [nanoc v3.4.3](http://nanoc.stoneship.org/), [HTML5 Boilerplate v4.0.2](http://html5boilerplate.com/) and much more (see below) to get you started right.
 
 See the [example skeleton site output here](http://jingoro.github.com/nanoc-html5boilerplate/).
