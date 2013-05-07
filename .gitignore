@@ -1,5 +1,7 @@
 # nanoc/project directories to ignore
 .sass-cache
-.rvmrc
+.ruby-gemset
+.ruby-version
+Gemfile.lock
 output
 tmp
